@@ -1,0 +1,14 @@
+
+  {
+    "pizze": [
+        { "id": 1, "name": "Margherita", "price": 4 },
+        { "id": 2, "name": "Diavola", "price": 5 },
+        { "id": 3, "name": "Quattro Stagioni", "price": 5.50 }
+    ],
+    "hamburgers": [
+        { "id": 1, "name": "Cheeseburger", "price": 7 },
+        { "id": 2, "name": "Hotburger", "price": 6 },
+        { "id": 3, "name": "Baconbuger", "price": 8 }
+    ]
+  }  
+
