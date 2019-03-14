@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 //token d4itqdmz67bhsnpymefac5jaalrygikz4fhhsmkp2p4hm7vj3b7q
 class Header extends Component {
