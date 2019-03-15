@@ -2,9 +2,17 @@ import React, { Component } from 'react';
 import Api from '../api/api';
 import { Link } from 'react-router-dom';
 
+
 class Menu extends Component {
-   
+
+  addItem(item) {
+    console.log('aggiungo ' + item) 
+  }
+  removeItem(item) {
+    console.log('tolgo ' + item)
+  }
   render() {
+ 
     return (
       <div>
         <ul className="pizzaList">
@@ -14,8 +22,8 @@ class Menu extends Component {
               <li key={p.id}> 
                 <span className="name">{p.name}</span>
                 <span className="price">{p.price}€</span> 
-                <button>-1</button>
-                <button>+1</button>
+                <button onClick={()=> this.removeItem(p.name)}>-1</button>
+                <button onClick={()=> this.addItem(p.name)}>+1</button>
               </li>
             ))
           }
@@ -26,8 +34,8 @@ class Menu extends Component {
               <li key={h.id}> 
                 <span className="name">{h.name}</span>
                 <span className="price">{h.price}€</span> 
-                <button>-1</button>
-                <button>+1</button>
+                <button onClick={()=> this.removeItem(h.name)}>-1</button>
+                <button onClick={()=> this.addItem(h.name)}>+1</button>
               </li>
             ))
           }
