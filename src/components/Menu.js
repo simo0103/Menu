@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import Api from '../api/api';
 import { Link } from 'react-router-dom';
-
-
+//https://css-tricks.com/understanding-react-setstate/
 class Menu extends Component {
-
+  state = { count: 0 }
   addItem(item) {
-    console.log('aggiungo ' + item) 
+    console.log('aggiungo ' + item);
+    this.setState({ count: this.state.count + 1});
+    console.log(this.state.count)
   }
   removeItem(item) {
     console.log('tolgo ' + item)
@@ -40,6 +41,9 @@ class Menu extends Component {
             ))
           }
         </ul>
+        <div>
+         { this.state.count }
+        </div>
         <Link to='/home'>Back</Link>
        
       </div>
