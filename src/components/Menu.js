@@ -4,10 +4,12 @@ import { Link } from 'react-router-dom';
 import '../style/css/menu.css';
 //https://css-tricks.com/understanding-react-setstate/
 class Menu extends Component {
-  state = { itemList: [] }
-  addItem(item) {
-    console.log('aggiungo ' + item);
-    this.setState({itemList: this.state.itemList.concat([item])});    
+  state = { itemList: []}
+//https://medium.freecodecamp.org/get-pro-with-react-setstate-in-10-minutes-d38251d1c781
+
+  addItem(item, price) {
+    console.log('aggiungo ' + item + price);
+    this.setState({itemList: this.state.itemList.concat([item , price])}); 
   }
   removeItem(item) {
     console.log('tolgo ' + item);
@@ -31,7 +33,7 @@ class Menu extends Component {
                   <span className="name">{p.name}</span>
                   <span className="price">{p.price}€</span> 
                   <button onClick={()=> this.removeItem(p.name)}>-1</button>
-                  <button onClick={()=> this.addItem(p.name)}>+1</button>
+                  <button onClick={(e)=> this.addItem(p.name, p.price)}>+1</button>
                 </li>
               ))
             }
@@ -51,11 +53,12 @@ class Menu extends Component {
         </div>
         
         <div className="cartList">
-        {this.state.itemList.length}
-
         {this.state.itemList}
+
+        {this.state.itemList.length / 2}
+
         </div>
-        
+
         <Link to='/home'>Back</Link>
        
       </div>
