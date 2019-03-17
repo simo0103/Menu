@@ -1,0 +1,10 @@
+.menu {
+    > div {
+        display: flex;
+        ul {
+            list-style-type: none;
+            flex: 1;
+        }
+       
+    }
+}
