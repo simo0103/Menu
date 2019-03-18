@@ -5,7 +5,7 @@ import '../style/css/menu.css';
 //https://css-tricks.com/understanding-react-setstate/
 class Menu extends Component {
   
-  state = { itemList: [], priceCounter: 0 }
+  state = { itemList: [], pricelist: [], priceCounter: 0 }
 
   
 //https://medium.freecodecamp.org/get-pro-with-react-setstate-in-10-minutes-d38251d1c781
@@ -13,18 +13,23 @@ class Menu extends Component {
   addItem(item, price) {
     console.log('aggiungo ' + item + price);
     this.setState({itemList: this.state.itemList.concat([item])}); 
+    this.setState({pricelist: this.state.pricelist.concat([price])});
     this.setState({priceCounter: this.state.priceCounter + price })
   }
 
   removeItem(item, price) {
     console.log('tolgo ' + item);
     var newItemList = [...this.state.itemList],
+        newPriceLIst = [...this.state.pricelist],
         index = newItemList.indexOf(item),
+        indexPrice = newPriceLIst.indexOf(price),
         newPriceCounter = [this.state.priceCounter];
 
     if (index !== -1 && newPriceCounter > 0) {
       newItemList.splice(index, 1);
+      newPriceLIst.splice(indexPrice, 1);
       this.setState({itemList: newItemList});
+      this.setState({pricelist: newPriceLIst});
       this.setState({ priceCounter: newPriceCounter - price })
     }
     
@@ -62,13 +67,20 @@ class Menu extends Component {
         </div>
         
         <div className="cartList">
-        
-        <span>{this.state.itemList}</span>
-        <span>Tot: {this.state.priceCounter}€</span>
-        
-
-
+          <ul>
+          {this.state.itemList.map((item, index) => (
+            <li key={index}>{item}</li>
+          ))}
+           
+          </ul>
+          <ul>
+          {this.state.pricelist.map((price, index) => (
+            <li key={index}>{price}€</li>
+          ))}
+           
+          </ul>
         </div>
+        <div>Tot: {this.state.priceCounter}€</div>
 
         <Link to='/home'>Back</Link>
        
