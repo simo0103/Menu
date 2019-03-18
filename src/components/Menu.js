@@ -4,21 +4,29 @@ import { Link } from 'react-router-dom';
 import '../style/css/menu.css';
 //https://css-tricks.com/understanding-react-setstate/
 class Menu extends Component {
-  state = { itemList: []}
+  
+  state = { itemList: [], priceCounter: 0 }
+
+  
 //https://medium.freecodecamp.org/get-pro-with-react-setstate-in-10-minutes-d38251d1c781
 
   addItem(item, price) {
     console.log('aggiungo ' + item + price);
-    this.setState({itemList: this.state.itemList.concat([item , price])}); 
+    this.setState({itemList: this.state.itemList.concat([item])}); 
+    this.setState({priceCounter: this.state.priceCounter + price })
   }
-  removeItem(item) {
+
+  removeItem(item, price) {
     console.log('tolgo ' + item);
-    var newItemList = [...this.state.itemList];
-    var index = newItemList.indexOf(item);
+    var newItemList = [...this.state.itemList],
+        index = newItemList.indexOf(item),
+        priceCounter = [...this.state.priceCounter];
+
     if (index !== -1) {
       newItemList.splice(index, 1);
       this.setState({itemList: newItemList});
     }
+    
   }
   render() {
  
@@ -45,7 +53,7 @@ class Menu extends Component {
                   <span className="name">{h.name}</span>
                   <span className="price">{h.price}€</span> 
                   <button onClick={()=> this.removeItem(h.name)}>-1</button>
-                  <button onClick={()=> this.addItem(h.name)}>+1</button>
+                  <button onClick={()=> this.addItem(h.name, h.price)}>+1</button>
                 </li>
               ))
             }
@@ -54,8 +62,8 @@ class Menu extends Component {
         
         <div className="cartList">
         {this.state.itemList}
+        {this.state.priceCounter}
 
-        {this.state.itemList.length / 2}
 
         </div>
 
