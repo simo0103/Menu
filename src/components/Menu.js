@@ -20,11 +20,12 @@ class Menu extends Component {
     console.log('tolgo ' + item);
     var newItemList = [...this.state.itemList],
         index = newItemList.indexOf(item),
-        priceCounter = [...this.state.priceCounter];
+        newPriceCounter = [this.state.priceCounter];
 
-    if (index !== -1) {
+    if (index !== -1 && newPriceCounter > 0) {
       newItemList.splice(index, 1);
       this.setState({itemList: newItemList});
+      this.setState({ priceCounter: newPriceCounter - price })
     }
     
   }
@@ -40,8 +41,8 @@ class Menu extends Component {
                 <li key={p.id}> 
                   <span className="name">{p.name}</span>
                   <span className="price">{p.price}€</span> 
-                  <button onClick={()=> this.removeItem(p.name)}>-1</button>
-                  <button onClick={(e)=> this.addItem(p.name, p.price)}>+1</button>
+                  <button onClick={()=> this.removeItem(p.name, p.price)}>-1</button>
+                  <button onClick={()=> this.addItem(p.name, p.price)}>+1</button>
                 </li>
               ))
             }
@@ -52,7 +53,7 @@ class Menu extends Component {
                 <li key={h.id}> 
                   <span className="name">{h.name}</span>
                   <span className="price">{h.price}€</span> 
-                  <button onClick={()=> this.removeItem(h.name)}>-1</button>
+                  <button onClick={()=> this.removeItem(h.name, h.price)}>-1</button>
                   <button onClick={()=> this.addItem(h.name, h.price)}>+1</button>
                 </li>
               ))
@@ -61,8 +62,10 @@ class Menu extends Component {
         </div>
         
         <div className="cartList">
-        {this.state.itemList}
-        {this.state.priceCounter}
+        
+        <span>{this.state.itemList}</span>
+        <span>Tot: {this.state.priceCounter}€</span>
+        
 
 
         </div>
