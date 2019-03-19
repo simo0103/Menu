@@ -38,7 +38,6 @@ class Menu extends Component {
  
     return (
       <div className="menu">
-        <div>
           <ul className="pizzaList">Pizze
             {
               Api.allPizza().map(p => (
@@ -63,9 +62,7 @@ class Menu extends Component {
                 </li>
               ))
             }
-          </ul>
-        </div>
-        
+          </ul>        
         <div className="cartList">
           <ul>
           {this.state.itemList.map((item, index) => (
@@ -79,8 +76,9 @@ class Menu extends Component {
           ))}
            
           </ul>
+          <span className="totale">Tot: {this.state.priceCounter}€</span>
+
         </div>
-        <div>Tot: {this.state.priceCounter}€</div>
 
         <Link to='/home'>Back</Link>
        
