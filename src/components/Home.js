@@ -2,10 +2,14 @@ import React, { Component } from 'react';
 
 class Home extends Component {
   render() {
+
     return (
       <div className="Home">
-       <p>sono la home</p>
+        <div>
+          <img alt="" src={require("../images/ham1.jpg")} ></img>
+        </div>
       </div>
+        
     );
   }
 }
