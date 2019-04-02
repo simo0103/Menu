@@ -1,15 +1,12 @@
 import React, { Component } from 'react';
-import Slider from './utils/Slider';
+import Menu from './Menu';
 
 class Home extends Component {
   render() {
 
     return (
       <div className="Home">
-      <Slider></Slider>
-        <div>
-          {/* <img alt="" src={require("../images/ham1.jpg")} ></img> */}
-        </div>
+      {/* <Menu></Menu> */}
       </div>
         
     );
