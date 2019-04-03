@@ -15,8 +15,15 @@ header {
             display: flex;
             flex-direction: column;
             align-items: center;
-            height: 100%;
+            height: 30%;
             justify-content: space-between;
+            li {
+                text-transform: uppercase;
+                a.active {
+                    border-bottom: 1px solid black;
+                    padding-bottom: 10px;
+                }
+            }
         }
     }
     
