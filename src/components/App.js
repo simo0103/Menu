@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import NavBar from './NavBar';
-import Main from './Main';
+import Main from './pages/Main';
 // const App = () => (
 //   <div>
 //     <Header />

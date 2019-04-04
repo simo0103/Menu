@@ -3,13 +3,11 @@ import { NavLink } from "react-router-dom";
 import '../style/css/navbar.css';
 import logo from '../images/logo.jpg';
 
-//token d4itqdmz67bhsnpymefac5jaalrygikz4fhhsmkp2p4hm7vj3b7q
 class NavBar extends Component {
   render() {
-   // var isActive = this.context.router.route.location.pathname === this.props.to;
-    var classActive =  'active' ;
+    var classActive = 'active';
     return (
-      <header>
+      <nav>
         <div className="logo">
         <img  src={logo}  alt="logo"/>
         </div>
@@ -20,7 +18,7 @@ class NavBar extends Component {
                   <li><NavLink activeClassName={classActive} to='/contacts'>Contacts</NavLink></li>
               </ul>
           </nav>
-      </header>
+        </nav>
     );
   }
 }

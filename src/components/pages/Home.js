@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
-import Menu from '../Menu';
+import Header from '../Header';
+import MenuMain from '../menuPages/MenuMain';
 
 class Home extends Component {
   render() {
-
     return (
       <div className="Home">
-      <Menu></Menu> 
+      <Header></Header> 
+      <MenuMain></MenuMain>
+
+      
+
       </div>
         
     );
