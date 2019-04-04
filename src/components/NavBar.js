@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { NavLink } from "react-router-dom";
-import '../style/css/header.css';
+import '../style/css/navbar.css';
 import logo from '../images/logo.jpg';
 
 //token d4itqdmz67bhsnpymefac5jaalrygikz4fhhsmkp2p4hm7vj3b7q
-class Header extends Component {
+class NavBar extends Component {
   render() {
    // var isActive = this.context.router.route.location.pathname === this.props.to;
     var classActive =  'active' ;
@@ -25,4 +25,4 @@ class Header extends Component {
   }
 }
 
-export default Header;
+export default NavBar;
