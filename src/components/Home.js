@@ -6,7 +6,7 @@ class Home extends Component {
 
     return (
       <div className="Home">
-      {/* <Menu></Menu> */}
+      <Menu></Menu> 
       </div>
         
     );

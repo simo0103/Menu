@@ -1,11 +1,11 @@
 header {
-    height: 100%;
+    height:-webkit-fill-available;
     overflow: hidden;
     width: 17em;
-    position: fixed;
     margin: 0;
     background-color: white;
     text-align: center;
+    float: left;
     .logo {
         text-transform: uppercase;
     }
@@ -19,6 +19,7 @@ header {
             justify-content: space-between;
             li {
                 text-transform: uppercase;
+                padding: 20px 0;
                 a.active {
                     border-bottom: 1px solid black;
                     padding-bottom: 10px;
