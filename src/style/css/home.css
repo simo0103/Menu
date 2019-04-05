@@ -1,0 +1,11 @@
+.Home ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 70%;
+  margin: 0 auto;
+  text-transform: uppercase;
+}
+/*# sourceMappingURL=home.css.map */

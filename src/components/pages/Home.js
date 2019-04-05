@@ -3,6 +3,7 @@ import Starters from '../menuPages/Starters';
 import Hamburger from '../menuPages/Hamburger';
 import Pizza from '../menuPages/Pizza';
 import Dessert from '../menuPages/Dessert';
+import '../../style/css/home.css';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 class Home extends Component {
