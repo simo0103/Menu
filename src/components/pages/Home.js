@@ -4,7 +4,7 @@ import Hamburger from '../menuPages/Hamburger';
 import Pizza from '../menuPages/Pizza';
 import Dessert from '../menuPages/Dessert';
 import '../../style/css/home.css';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
 
 class Home extends Component {
   render() {
@@ -13,16 +13,16 @@ class Home extends Component {
        <div className="Home">
         <ul>
           <li>
-            <Link to="/">starters</Link>
+            <NavLink to="/" activeClassName="selected" exact={true}>starters</NavLink>
           </li>
           <li>
-            <Link to="/hamburger">hambugers</Link>
+            <NavLink to="/hamburger" activeClassName="selected">hambugers</NavLink>
           </li>
           <li>
-            <Link to="/pizza">pizza</Link>
+            <NavLink to="/pizza" activeClassName="selected">pizza</NavLink>
           </li>
           <li>
-            <Link to="/dessert">dessert</Link>
+            <NavLink to="/dessert">dessert</NavLink>
           </li>
         </ul>
         <Route exact path='/' component= {Starters}></Route>
