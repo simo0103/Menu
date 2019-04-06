@@ -1,11 +1,26 @@
+.Home {
+  width: 50%;
+  margin-left: 290px;
+}
+
 .Home ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  width: 70%;
-  margin: 0 auto;
+  -ms-flex-item-align: center;
+      align-self: center;
   text-transform: uppercase;
+  padding-top: 50px;
+}
+
+.Home ul li a {
+  padding-bottom: 10px;
+  display: block;
+}
+
+.Home ul li a.selected {
+  border-bottom: 1px solid black;
 }
 /*# sourceMappingURL=home.css.map */

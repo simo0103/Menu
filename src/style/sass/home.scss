@@ -1,9 +1,21 @@
 .Home {
+    width: 50%;
+    margin-left: 290px;
     ul {
     display: flex;
     justify-content: space-around;
-    width: 70%;
-    margin: 0 auto;
+    align-self: center;
     text-transform: uppercase;
+    padding-top: 50px;
+        li {
+            a {
+                padding-bottom: 10px;
+                display: block;
+                &.selected {
+                    border-bottom: 1px solid black;
+                } 
+            }
+                
+        }
     }
 }

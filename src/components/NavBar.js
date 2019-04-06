@@ -13,7 +13,7 @@ class NavBar extends Component {
         </div>
           <nav>
               <ul>
-                  <li><NavLink activeClassName={classActive} exact={true} to='/'>Home</NavLink></li>
+                  <li><NavLink activeClassName={classActive} exact={true} to='/home'>Home</NavLink></li>
                   <li><NavLink activeClassName={classActive} to='/about'>About</NavLink></li>
                   <li><NavLink activeClassName={classActive} to='/contacts'>Contacts</NavLink></li>
               </ul>

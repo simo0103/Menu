@@ -5,6 +5,11 @@ import Pizza from '../menuPages/Pizza';
 import Dessert from '../menuPages/Dessert';
 import '../../style/css/home.css';
 import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
+import spaghetti from '../../images/spaghetti.png';
+import pizza from '../../images/pizza.png';
+import hamburger from '../../images/hamburger.png';
+
+
 
 class Home extends Component {
   render() {
@@ -12,17 +17,17 @@ class Home extends Component {
       <Router>
        <div className="Home">
         <ul>
-          <li>
+          <li className="starters">
             <NavLink to="/" activeClassName="selected" exact={true}>starters</NavLink>
           </li>
-          <li>
+          <li className="hamburgers">
             <NavLink to="/hamburger" activeClassName="selected">hambugers</NavLink>
           </li>
-          <li>
+          <li className="pizza">
             <NavLink to="/pizza" activeClassName="selected">pizza</NavLink>
           </li>
           <li>
-            <NavLink to="/dessert">dessert</NavLink>
+            <NavLink to="/dessert" activeClassName="selected">dessert</NavLink>
           </li>
         </ul>
         <Route exact path='/' component= {Starters}></Route>
@@ -32,7 +37,6 @@ class Home extends Component {
         </div>
       </Router>
 
-     
         
     );
   }
