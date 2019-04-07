@@ -13,18 +13,18 @@ class Starters extends Component {
     var settings = {
       dots: true,
       infinite: true,
-      speed: 500,
-      slidesPerRow: 2,
-      rows: 2,
-      variableWidth: true 
+      slidesToShow: 2,
+      slidesToScroll: 2,
+      arrows: false,
+      rows: 2
     };
     return (
       <div className="starters">
        <Slider {...settings}>
        {
-           Api.allStarters().map(p => (
+           Api.allStarters().map((p, key) => (
         <div className="slider-block">
-          <p key={p.id}>{p.name}</p>
+          <div><img key={key} alt={p.name} src={p.photo}></img></div>
         </div>
            ))
        }

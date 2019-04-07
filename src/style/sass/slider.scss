@@ -1,7 +1,22 @@
 .slick-slider {
+    .slick-slide {
+        overflow: hidden;
+    }
     .slider-block {
         background-color: white;
         margin: 20px;
-        height: 150px;
+        height: 500px;
+    div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: inherit;
+        img {
+            max-width: 50%;
+            object-fit: contain;
+            }
+
+        }
     }
 }
