@@ -15,7 +15,7 @@ class Starters extends Component {
       infinite: true,
       slidesToShow: 2,
       slidesToScroll: 2,
-      arrows: false,
+      arrows: true,
       rows: 2
     };
     return (
@@ -30,7 +30,7 @@ class Starters extends Component {
        }
        
         </Slider>
-          <Link to='/home'>Back</Link>
+          {/* <Link to='/home'>Back</Link> */}
       </div>
     );
   }

@@ -1,11 +1,18 @@
 .slick-slider {
     .slick-slide {
         overflow: hidden;
+        div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            margin: 10px;
+        }
     }
     .slider-block {
         background-color: white;
-        margin: 20px;
-        height: 200px;
+        height: 300px;
     div {
     display: flex;
     flex-direction: column;
@@ -13,10 +20,24 @@
     justify-content: center;
     height: inherit;
         img {
-            max-width: 50%;
+            max-width: 40%;
             object-fit: contain;
             }
 
+        }
+    }
+    .slick-arrow {
+        top: 100%;
+        transform: none;
+        &::before {
+            font-family: unset;
+            color: black;
+        }
+        &.slick-next {
+            right: 10px;
+        }
+        &.slick-prev {
+            left: 10px;
         }
     }
 }
