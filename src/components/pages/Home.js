@@ -5,11 +5,6 @@ import Pizza from '../menuPages/Pizza';
 import Dessert from '../menuPages/Dessert';
 import '../../style/css/home.css';
 import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
-import spaghetti from '../../images/spaghetti.png';
-import pizza from '../../images/pizza.png';
-import hamburger from '../../images/hamburger.png';
-
-
 
 class Home extends Component {
   render() {
@@ -36,7 +31,6 @@ class Home extends Component {
         <Route exact path='/dessert' component= {Dessert}></Route>
         </div>
       </Router>
-
         
     );
   }
