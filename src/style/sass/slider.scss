@@ -8,24 +8,37 @@
             align-items: center;
             align-content: center;
             margin: 10px;
-        }
-    }
-    .slider-block {
-        background-color: white;
-        height: 300px;
-    div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: inherit;
-        img {
-            max-width: 40%;
-            object-fit: contain;
+            a {
+            background-color: white;
+            height: 300px;
+            position: relative;
+            img {
+                max-width: 40%;
+                transform: translate(50%,-50%);
+                right: 50%;
+                position: absolute;
+                top: 50%;
+                }
             }
-
         }
     }
+    // .slider-block {
+    //     background-color: white;
+    //     height: 300px;
+    //     div {
+    //         display: flex;
+    //         flex-direction: column;
+    //         align-items: center;
+    //         justify-content: center;
+    //         height: inherit;
+
+    //         img {
+    //             max-width: 40%;
+    //             object-fit: contain;
+    //             }
+
+    //     }
+    // }
     .slick-arrow {
         top: 100%;
         transform: none;
