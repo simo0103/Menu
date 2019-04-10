@@ -1,9 +1,9 @@
 .Home {
-  width: 50%;
   margin-left: 290px;
 }
 
 .Home ul {
+  width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -22,5 +22,19 @@
 
 .Home ul li a.selected {
   border-bottom: 1px solid black;
+}
+
+.Home .menuList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.Home .menuList .slick-slider, .Home .menuList .info {
+  width: 50%;
+}
+
+.Home .menuList .info {
+  background-color: white;
 }
 /*# sourceMappingURL=home.css.map */

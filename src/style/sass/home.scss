@@ -1,7 +1,7 @@
 .Home {
-    width: 50%;
     margin-left: 290px;
     ul {
+    width: 50%;
     display: flex;
     justify-content: space-around;
     align-self: center;
@@ -14,8 +14,17 @@
                 &.selected {
                     border-bottom: 1px solid black;
                 } 
-            }
-                
+            }               
         }
     }
+    .menuList {
+        display: flex;
+        .slick-slider, .info {
+            width: 50%;
+        }
+        .info {
+            background-color: white;
+        }
+    }
+    
 }
