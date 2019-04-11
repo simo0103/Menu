@@ -2,7 +2,7 @@
   margin-left: 290px;
 }
 
-.Home ul {
+.Home > ul {
   width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -15,12 +15,12 @@
   padding-top: 50px;
 }
 
-.Home ul li a {
+.Home > ul li a {
   padding-bottom: 10px;
   display: block;
 }
 
-.Home ul li a.selected {
+.Home > ul li a.selected {
   border-bottom: 1px solid black;
 }
 
@@ -31,7 +31,7 @@
 }
 
 .Home .menuList .slick-slider, .Home .menuList .info {
-  width: 50%;
+  width: 48%;
 }
 
 .Home .menuList .info {
