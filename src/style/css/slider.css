@@ -2,7 +2,7 @@
   overflow: hidden;
 }
 
-.slick-slider .slick-slide div {
+.slick-slider .slick-slide > div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -18,17 +18,14 @@
           align-items: center;
   -ms-flex-line-pack: center;
       align-content: center;
-  margin: 10px;
-}
-
-.slick-slider .slick-slide div a {
+  margin: 20px 10px;
   background-color: white;
   height: 300px;
   position: relative;
 }
 
-.slick-slider .slick-slide div a img {
-  max-width: 40%;
+.slick-slider .slick-slide > div img {
+  max-width: 60%;
   -webkit-transform: translate(50%, -50%);
           transform: translate(50%, -50%);
   right: 50%;

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Api from '../../api/api';
-import { BrowserRouter as Router, Route, NavLink, Link, Switch } from "react-router-dom";
 import Slider from "react-slick";
 import '../../style/css/slider.css';
 
@@ -36,22 +35,22 @@ class Starters extends Component {
 
     return (
       <div className="menuList">
-      <Slider {...settings}>
-        {
-          Api.allStarters().map(p => (            
-            <div onClick={()=> this.addItem(p.name, p.price)}><img alt={p.name} src={p.photo}></img></div>       
-          ))
-        }
-      </Slider>
-      <div className="info">
-        <p>info</p>
-        <p>{this.state.item}</p>
-  
+        <Slider {...settings}>
+          {
+            Api.allStarters().map(p => (            
+              <div key={p.id} onClick={()=> this.addItem(p.name, p.price)}><img alt={p.name} src={p.photo}></img></div>       
+            ))
+          }
+        </Slider>
+        <div className="info">
+          <p>info</p>
+          <p>{this.state.item}</p>
+        
+    
         </div>
       </div>
     );
   }
 }
-
 
 export default Starters;

@@ -1,26 +1,25 @@
 .slick-slider {
     .slick-slide {
         overflow: hidden;
-        div {
+        >div {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             align-content: center;
-            margin: 10px;
-            a {
-            background-color: white;
+            margin: 20px 10px;
+            background-color: white;          
             height: 300px;
             position: relative;
             img {
-                max-width: 40%;
+                max-width: 60%;
                 transform: translate(50%,-50%);
                 right: 50%;
                 position: absolute;
                 top: 50%;
                 }
             }
-        }
+        
     }
     // .slider-block {
     //     background-color: white;
