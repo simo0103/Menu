@@ -13,17 +13,17 @@
 
   ],
     "pizze": [
-        { "key": 1, "name": "Margherita", "price": 4.00, "photo": "images/pizza.png" },
-        { "key": 2, "name": "Diavola", "price": 5.00, "photo": "images/pizza.png" },
-        { "key": 3, "name": "Quattro Stagioni", "price": 5.50, "photo": "images/pizza.png" },
-        { "key": 4, "name": "Wurstel", "price": 5.00, "photo": "images/pizza.png" }
+        { "key": 1, "name": "Margherita", "price": 4.00, "photo": "" },
+        { "key": 2, "name": "Diavola", "price": 5.00, "photo": "" },
+        { "key": 3, "name": "Quattro Stagioni", "price": 5.50, "photo": "" },
+        { "key": 4, "name": "Wurstel", "price": 5.00, "photo": "" }
 
     ],
     "hamburgers": [
-        { "key": 1, "name": "Cheeseburger", "price": 7.00, "photo": "images/hamburger.png" },
-        { "key": 2, "name": "Hotburger", "price": 6.00, "photo": "images/hamburger.png" },
-        { "key": 3, "name": "Baconbuger", "price": 8.00, "photo": "images/hamburger.png" },
-        { "key": 4, "name": "Doubleburger", "price": 8.50, "photo": "images/hamburger.png" }
+        { "key": 1, "name": "Cheeseburger", "price": 7.00, "photo": "" },
+        { "key": 2, "name": "Hotburger", "price": 6.00, "photo": "" },
+        { "key": 3, "name": "Baconbuger", "price": 8.00, "photo": "" },
+        { "key": 4, "name": "Doubleburger", "price": 8.50, "photo": "" }
 
     ]
   }  

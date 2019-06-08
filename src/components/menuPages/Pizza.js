@@ -24,7 +24,9 @@ class Pizza extends Component {
        {
            Api.allPizza().map((p, key) => (
         <div className="slider-block">
-          <div><img key={key} alt={p.name} src={p.photo}></img></div>
+          <div>
+            {/* <img key={key} alt={p.name} src={p.photo}></img> */}
+          </div>
         </div>
            ))
        }
